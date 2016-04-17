@@ -1,5 +1,12 @@
-<p>
-  ng2blog Works!
-</p>
+<h1>Angular 2 Blog</h1>
+<div>
+  <span *ngIf="af.auth | async">
+    Logged in as {{ (af.auth | async).github.username }}
+    <button>Log Out</button>
+  </span>
+  <span *ngIf="!(af.auth | async)">
+    <button (click)="af.auth.login()">Log In</button>
+  </span>
+</div>
 
 <router-outlet></router-outlet>

@@ -10,10 +10,12 @@ import {Observable} from 'rxjs/Observable';
   directives: [ROUTER_DIRECTIVES],
   pipes: []
 })
+
 @RouteConfig([
 ])
+
 export class Ng2blogApp {
-  constructor(af: AngularFire) {
-    
+  constructor(public af:AngularFire) {
+
   }
 }
