@@ -1,12 +1,17 @@
-<h1>Angular 2 Blog</h1>
-<div>
-  <span *ngIf="af.auth | async">
-    Logged in as {{ (af.auth | async).github.username }}
-    <button (click)="af.auth.logout()" class="btn">Log Out</button>
-  </span>
-  <span *ngIf="!(af.auth | async)">
-    <button (click)="af.auth.login()" class="btn btn-primary">Log In</button>
-  </span>
+<div class="container">
+  <div class="col-sm-12">
+    <h1>Angular 2 Blog</h1>
+    <div>
+      <span *ngIf="af.auth | async">
+        Logged in as {{ (af.auth | async).github.username }}
+        <button (click)="af.auth.logout()" class="btn">Log Out</button>
+      </span>
+      <span *ngIf="!(af.auth | async)">
+        <button (click)="af.auth.login()" class="btn btn-primary">Log In</button>
+      </span>
+    </div>
+
+    <router-outlet></router-outlet>
+  </div>
 </div>
 
-<router-outlet></router-outlet>
